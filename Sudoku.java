@@ -19,7 +19,26 @@ public class Sudoku {
 
     }
 
-    public String toString() {
-        return "";
-    }
+
+   public String toString() {
+       StringBuilder sb = new StringBuilder();
+       
+       for (int r = 0; r < 9; r++) {
+           for (int c = 0; c < 9; c++) {
+               sb.append(board[r][c]);
+               if (c < 8){
+                  sb.append(' ');
+               }
+           }
+           sb.append('\n');
+   
+           if (r == 2 || r == 5) {
+               sb.append('\n');
+           }
+       }
+   
+       return sb.toString();
+   }
+   
 }
+   
